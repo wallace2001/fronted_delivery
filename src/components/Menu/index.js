@@ -27,9 +27,13 @@ export const Menu = styled.div`
 
         background-color: ${({ theme }) => theme.colors.primary};
 
-        /* @media screen and (max-width: 1000px){
+        @media screen and (max-width: 1000px){
             left: ${({ onclick }) => onclick ? '360%' : '15%'};
-        } */
+        }
+
+        @media screen and (max-width: 600px){
+            left: ${({ onclick }) => onclick ? '400%' : '15%'};
+        }
     }
 
     &::before{
@@ -47,9 +51,14 @@ export const Menu = styled.div`
         transform: ${({ onclick }) => onclick ? 'rotate(310deg)' : ''};
 
         background-color: ${({ theme }) => theme.colors.primary};
-        /* @media screen and (max-width: 1000px){
+
+        @media screen and (max-width: 1000px){
             left: ${({ onclick }) => onclick ? '360%' : '15%'};
-        } */
+        }
+
+        @media screen and (max-width: 600px){
+            left: ${({ onclick }) => onclick ? '400%' : '15%'};
+        }
     }
 
 
