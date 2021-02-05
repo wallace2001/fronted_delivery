@@ -1,0 +1,11 @@
+{
+    "bg": "https://www.questtono.com/wp-content/uploads/2017/10/WES_BRPK_FOTO_1.jpg",
+    "theme": {
+        "colors":{
+            "colorHeader": "black",
+            "primary": "#fff",
+            "secondary": "black",
+            "test": "#ccc"
+        }
+    }
+}
