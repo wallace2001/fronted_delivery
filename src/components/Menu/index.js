@@ -40,7 +40,7 @@ export const Menu = styled.div`
         content: '';
         position: absolute;
         top: ${({ onclick }) => onclick ? '45%' : '60%'};
-        left: ${({ onclick }) => onclick ? '330%' : '30%'};
+        left: ${({ onclick }) => onclick ? '330%' : '40%'};
 
         width:${({ onclick }) => onclick ? '50%' : '40%'};
         height: 2px;
