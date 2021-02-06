@@ -40,6 +40,10 @@ Nav.Wrap = styled.div`
 
     margin: 100px 0px 100px 0px;
 
+    @media screen and (max-width: 600px){
+        margin: 150px 0px 150px 0px;
+    }
+
 `;
 
 Nav.Link = styled.a`
