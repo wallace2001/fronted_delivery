@@ -1,5 +1,56 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import React from 'react';
 
-export default (req, res) => {
-  res.status(200).json({ name: 'John Doe' })
-}
+export const falseApi = [
+    {
+        name : "Big Tasty",
+        price : "R$29,90",
+        description: "Hamburguer de frango com uma pimenta picante!",
+        photo: "https://www.nidelins.com.br/wp-content/uploads/2019/04/hamburguer-xique-xique.jpeg",
+    },
+
+    {
+        name : "Big Tasty",
+        price : "R$29,90",
+        description: "Hamburguer de frango com uma pimenta picante!",
+        photo: "https://www.nidelins.com.br/wp-content/uploads/2019/04/hamburguer-xique-xique.jpeg",
+        },
+        {
+            name : "Big Tasty",
+            price : "R$29,90",
+            description: "Hamburguer de frango com uma pimenta picante!",
+            photo: "https://www.nidelins.com.br/wp-content/uploads/2019/04/hamburguer-xique-xique.jpeg",
+            },
+            {
+                name : "Big Tasty",
+                price : "R$29,90",
+                description: "Hamburguer de frango com uma pimenta picante!",
+                photo: "https://www.nidelins.com.br/wp-content/uploads/2019/04/hamburguer-xique-xique.jpeg",
+                },
+                {
+                    name : "Big Tasty",
+                    price : "R$29,90",
+                    description: "Hamburguer de frango com uma pimenta picante!",
+                    photo: "https://www.nidelins.com.br/wp-content/uploads/2019/04/hamburguer-xique-xique.jpeg",
+                    },
+                    {
+                        name : "Big Tasty",
+                        price : "R$29,90",
+                        description: "Hamburguer de frango com uma pimenta picante!",
+                        photo: "https://www.nidelins.com.br/wp-content/uploads/2019/04/hamburguer-xique-xique.jpeg",
+                        },
+                        {
+                            name : "Big Tasty",
+                            price : "R$29,90",
+                            description: "Hamburguer de frango com uma pimenta picante!",
+                            photo: "https://www.nidelins.com.br/wp-content/uploads/2019/04/hamburguer-xique-xique.jpeg",
+                            },
+
+                            {
+                                name : "Big Tasty",
+                                price : "R$29,90",
+                                description: "Hamburguer de frango com uma pimenta picante!",
+                                photo: "https://www.nidelins.com.br/wp-content/uploads/2019/04/hamburguer-xique-xique.jpeg",
+                                },
+            
+]
+

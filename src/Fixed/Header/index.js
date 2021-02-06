@@ -14,7 +14,7 @@ export const Header = () => {
             </Box.Header>
 
             <Box.Header>
-              <h2>LOGO</h2>  
+              <h2>RESTAURANTE</h2>  
             </Box.Header>
 
             <div></div>
