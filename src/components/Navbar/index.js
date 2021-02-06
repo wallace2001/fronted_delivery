@@ -38,14 +38,21 @@ Nav.Wrap = styled.div`
     flex-direction: column;
     align-items: center;
 
-    padding: 50% 0px 50% 0px;
+    margin: 100px 0px 100px 0px;
 
-    & > h3{
-        font-size: 25px;
-        width: 100px;
-        text-align: center;
-        color: white;
-        border-bottom: 1px solid #e3c012;
-    }
+`;
 
+Nav.Link = styled.a`
+    width: 90px;
+    font-size: 20px;
+    text-align: center;
+    
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e3c012;
+    text-decoration: none;
 `;

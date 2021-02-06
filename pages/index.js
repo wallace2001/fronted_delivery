@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import config from '../pages/api/config.json';
+import config from './api/config.json';
 import { Header } from '../src/Fixed/Header';
 
 const ContainerBg = styled.div`

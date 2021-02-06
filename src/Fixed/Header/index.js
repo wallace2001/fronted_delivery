@@ -16,6 +16,8 @@ export const Header = () => {
             <Box.Header>
               <h2>LOGO</h2>  
             </Box.Header>
+
+            <div></div>
         </Box>
       </Container>
   )

@@ -8,5 +8,24 @@
             "secondary": "black",
             "test": "#ccc"
         }
+    },
+    "links":{
+        "title":[
+            "HOME",
+            "CARDÁPIO",
+            "PROMOÇÃO",
+            "CONTATO",
+            "AVALIAÇÃO",
+            "SOBRE"
+        ],
+        "links":[
+            "",
+            "menu",
+            "promo",
+            "contact",
+            "evaluation",
+            "about"
+        ]
+
     }
 }
