@@ -68,7 +68,9 @@ export const Menu = styled.div`
 Menu.Container = styled.div`
     width: 100%;
     height: 100%;
+
     background-color: rgba(31, 17, 0, 1);
+    background-image: url(${({ backgroundImg }) => backgroundImg ? backgroundImg : ''});
 
     h1{
         color: ${({ theme }) => theme.colors.primary};
@@ -78,28 +80,44 @@ Menu.Container = styled.div`
 
 `;
 
-Menu.Content = styled.div`
+Menu.Black = styled.div`
+    width: 100%;
+    height: 100%;
 
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
 
-    padding: 0px 4% 0px 4%;
+    background-color: rgba(0,0,0,.5);
 `;
 
-Menu.Slick = styled.div`
+Menu.Content = styled.div`
+    width: 60%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 6%;
-    padding-bottom: 5%;
+
+    background-color: rgba(255,255,255,.8);
+
+    padding: 0px 5% 5% 5%;
+
+    h2{
+        font-size: 30px;
+        border-bottom: 1px solid black;
+    }
+`;
+
+Menu.Wrap = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    padding-top: 5%;
 
     h4{
         color: ${({ theme }) => theme.colors.primary};
-        padding: 0px 20% 0px 20%;
-        text-align: center;
     }
 
     h1{
@@ -110,9 +128,6 @@ Menu.Slick = styled.div`
         width: 200px;
         height: 150px;
         border-radius: 10px;
-        -webkit-box-shadow: 14px 18px 0px -1px rgba (230,157,0,1);
-        -moz-box-shadow: 14px 18px 0px -1px rgba (230,157,0,1);
-        box-shadow: 14px 18px 0px -1px rgba (230,157,0,1);
     }
 
     button{
@@ -135,6 +150,44 @@ Menu.Slick = styled.div`
 
         color: white;
         font-size: 20px;
+    }
+
+    @media screen and (max-width: 760px){
+        flex-direction: column;
+    }
+`;
+
+Menu.column1 = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h4{
+        color: black;
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: 400px){
+        
+    }
+`;
+
+Menu.column2 = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 50px;
+
+    p{
+        padding: 0px 15% 0px 15%;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 760px){
+        padding-top: 10px;
+        flex-direction: column;
     }
 `;
 

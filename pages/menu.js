@@ -7,43 +7,29 @@ import db from '../pages/api/config.json';
 
 export default function Home() {
   const API = falseApi;
-  const colors = db.theme;
+  const img = db.bgMenu;
   
   return (
     <>
       <Header />
-      <Menu.Container>
-          <h1>HAMBURGUER DE FRANGO</h1>
+      <Menu.Container backgroundImg={img}>
+        <Menu.Black>
           <Menu.Content>
-            
+          <h2>CARDÁPIO</h2>
             {API.map((info, index) => (
-
-              <Menu.Slick key={index}>
-                <img src={info.photo} alt={info.name} />
-                <h1>{info.name}</h1>
-                <h4>{info.description}</h4>
-
-                <button>{info.price}</button>
-              </Menu.Slick>
-              
+              <Menu.Wrap key={index}>
+                <Menu.column1>
+                  <h4>{info.name}</h4>
+                  <img src={info.photo} alt={info.name} />
+                </Menu.column1>
+                <Menu.column2>
+                  <p>{info.description}</p>
+                  <button>{info.price}</button>
+                </Menu.column2>
+              </Menu.Wrap>
             ))}
           </Menu.Content>
-
-          <h1>HAMBURGUER DE FRANGO</h1>
-          <Menu.Content>
-            
-            {API.map((info, index) => (
-
-              <Menu.Slick key={index}>
-                <img src={info.photo} alt={info.name} />
-                <h1>{info.name}</h1>
-                <h4>{info.description}</h4>
-
-                <button>{info.price}</button>
-              </Menu.Slick>
-              
-            ))}
-          </Menu.Content>
+        </Menu.Black>
       </Menu.Container>
     </>
   )
