@@ -71,6 +71,7 @@ Menu.Container = styled.div`
 
     background-color: rgba(31, 17, 0, 1);
     background-image: url(${({ backgroundImg }) => backgroundImg ? backgroundImg : ''});
+    background-size: cover;
 
     h1{
         color: ${({ theme }) => theme.colors.primary};
@@ -131,7 +132,7 @@ Menu.Wrap = styled.div`
     }
 
     button{
-        width: 150px;
+        width: 200px;
         height: 50px;
 
         background-color: #bf9300;

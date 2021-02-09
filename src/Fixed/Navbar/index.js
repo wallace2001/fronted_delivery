@@ -5,6 +5,8 @@ import db from '../../../pages/api/config.json';
 import { useRouter } from 'next/router';
 const titles = db.links.title;
 const links = db.links.links;
+import { SidebarData } from '../../../pages/api/info';
+import { SubMenu } from '../SubMenu/index';
 
 export const Navbar = () => {
 
@@ -33,10 +35,11 @@ export const Navbar = () => {
               </Nav>
               <Nav.Content onclick={navbar}>
                 <Nav.Wrap>
-                  {titles.map((title, index) => (
-                    <div key={index}>
-                      <Nav.Link onClick={nextPage} id={index}>{title}</Nav.Link>
-                    </div>
+                  {SidebarData.map((info, index) => (
+                    <Nav.space key={index}>
+                      <SubMenu item={info} key={index} index={index} />
+                      {/* <Nav.Link onClick={nextPage} id={index}>{info.title}</Nav.Link> */}
+                    </Nav.space>
                   ))}
                 </Nav.Wrap>
               </Nav.Content>
