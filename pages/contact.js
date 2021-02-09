@@ -4,11 +4,11 @@ import { Header } from '../src/Fixed/Header';
 import { Contact } from '../src/components/Contact';
 
 export default function Home() {
-  const img = db.bgContact;
+  const img = db.bgMenu;
   return (
     <>
         <Header />
-          <Contact.bg>
+          <Contact.bg backgroundImg={img}>
           <Contact>
             <Contact.Content>
               <Contact.Box>

@@ -15,7 +15,8 @@ export const Contact = styled.div`
 Contact.bg = styled.div`
     width: 100%;
     height: 100%;
-    background-color: rgba(20,20,20);
+    background-image: url(${({ backgroundImg }) => backgroundImg ? backgroundImg : ''});
+    background-size: cover;
 `;
 
 Contact.Content = styled.div`
