@@ -1,7 +1,9 @@
 {
+    "bgContact": "https://ntbrand-wp.s3.amazonaws.com/livent/wp-content/uploads/2018/08/13155151/SearchFX2_5b229dafac40a9f608232bc8-e1534189919644.jpeg",
     "bgMedia": "https://www.questtono.com/wp-content/uploads/2017/10/WES_BRPK_FOTO_2.jpg",
     "bgMenu": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/3f663368278613.5b5764ab237a4.jpg",
     "bg": "https://www.questtono.com/wp-content/uploads/2017/10/WES_BRPK_FOTO_1.jpg",
+    "bgContact": "https://images7.alphacoders.com/977/977986.jpg",
     "theme": {
         "colors":{
             "colorHeader": "black",

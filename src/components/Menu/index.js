@@ -87,13 +87,11 @@ Menu.Black = styled.div`
 
     display: flex;
     justify-content: center;
-
     background-color: rgba(0,0,0,.5);
 `;
 
 Menu.Content = styled.div`
     width: 60%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

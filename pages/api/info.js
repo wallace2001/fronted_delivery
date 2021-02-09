@@ -23,14 +23,13 @@ export const SidebarData = [
             title: "SOBREMESA",
             path: '/dessert',
             icon: <FaCandyCane color="#fff" />
+        },
+        {
+            title: 'PROMOÇÃO',
+            path: '/promo',
+            icon: <BiMoney  color="#fff"/>
         }
         ]
-    },
-
-    {
-        title: 'PROMOÇÃO',
-        path: '/promo',
-        icon: <BiMoney />
     },
 
     {

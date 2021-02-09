@@ -15,7 +15,7 @@ export default function Home() {
       <Menu.Container backgroundImg={img}>
         <Menu.Black>
           <Menu.Content>
-          <h2>CARDÁPIO</h2>
+          <h2>HAMBURGUER</h2>
             {API.map((info, index) => (
               <Menu.Wrap key={index}>
                 <Menu.column1>
