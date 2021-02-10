@@ -7,13 +7,11 @@ export const Contact = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: rgba(0,0,0,.5);
 `;
 
 
 Contact.bg = styled.div`
-    width: 100%;
+    width: 50%;
     height: 100%;
     background-image: url(${({ backgroundImg }) => backgroundImg ? backgroundImg : ''});
     background-size: cover;
@@ -36,8 +34,6 @@ Contact.Box = styled.div`
     flex-direction: row;
 
     padding: 2% 2% 0px 2%;
-
-    background-color: rgba(255,255,255,.9);
 
     @media screen and (max-width: 960px){
         width: 600px;

@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
         <Header />
-          <Contact.bg backgroundImg={img}>
-          <Contact>
+        <Contact>
+          <Contact.bg backgroundImg={img} />
             <Contact.Content>
               <Contact.Box>
                 <Contact.Wrapper>
@@ -34,7 +34,6 @@ export default function Home() {
               </Contact.Box>
             </Contact.Content>
             </Contact>
-          </Contact.bg>
     </>
   )
 }
