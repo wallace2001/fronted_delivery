@@ -23,11 +23,12 @@ Contact.Content = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0px 10% 0px 10%;
 `;
 
 Contact.Box = styled.div`
-    width: 900px;
-    height: 700px;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -35,14 +36,8 @@ Contact.Box = styled.div`
 
     padding: 2% 2% 0px 2%;
 
-    @media screen and (max-width: 960px){
-        width: 600px;
-        height: 700px;
-    }
 
     @media screen and (max-width: 660px){
-        width: 400px;
-        height: 100%;
         align-items: center;
         flex-direction: column;
     }
