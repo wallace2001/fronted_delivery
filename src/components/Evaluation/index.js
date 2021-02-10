@@ -23,6 +23,7 @@ Evaluation.Content = styled.div`
 
 Evaluation.Box = styled.div`
     width: 600px;
+    border-radius: 10px;
     
     padding: 3%;
     background-color: rgba(255,255,255,.8);

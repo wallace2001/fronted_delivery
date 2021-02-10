@@ -71,7 +71,7 @@ export default function Home() {
                               size={25}
                               onMouseEnter={() => setHover(ratingValue)}
                               onMouseLeave={() => setHover(null)}
-                              color={ratingValue <= (checked || hover) ? "#ffc107" : "#ccc"} />
+                              color={ratingValue <= (checked || hover) ? "#ffc107" : "rgba(100,100,100)"} />
                           </label>
                         );
                       })}
