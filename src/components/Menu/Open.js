@@ -5,6 +5,7 @@ export const Menu = styled.div`
     height: 50px;
     z-index: 999;
     /* display: ${({ onclick }) => onclick ? 'none' : 'block'}; */
+    opacity: ${({ onclick }) => onclick ? 0 : 1};
     border-radius: 16px;
     position: relative;
 

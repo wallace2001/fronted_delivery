@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import { Menu } from '../../components/Menu';
+import { Menu } from '../../components/Menu/Open';
+import { Close } from '../../components/Menu/Close';
 import { Nav } from '../../components/Navbar';
 import db from '../../../pages/api/config.json';
 import { useRouter } from 'next/router';
@@ -34,6 +35,7 @@ export const Navbar = () => {
                   <Menu to="#" onClick={showNavbar} onclick={navbar} />
               </Nav>
               <Nav.Content onclick={navbar}>
+                  <Close to="#" onClick={showNavbar} onclick={navbar} />
                 <Nav.Wrap>
                   {SidebarData.map((info, index) => (
                     <Nav.space key={index}>

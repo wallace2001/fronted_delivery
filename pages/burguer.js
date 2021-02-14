@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu } from '../src/components/Menu';
+import { Menu } from '../src/components/Menu/Open';
 import { Header } from '../src/Fixed/Header';
 import {falseApi} from '../pages/api/hello';
 import db from '../pages/api/config.json';
