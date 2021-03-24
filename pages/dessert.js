@@ -10,7 +10,7 @@ export default function Home() {
   const [dessert, setDessert] = useState();
 
   useEffect(() => {
-    api.get('dessert/dessertget')
+    api.get('/dessert/dessertget')
     .then(res => setDessert(res.data));
   }, [dessert])
 

@@ -12,7 +12,7 @@ export default function Home() {
   const img = db.bgMenu;
 
   useEffect(() => {
-    api.get('description/descriptionget')
+    api.get('/description/descriptionget')
     .then(res => {
       setBurguer(res.data);
     });

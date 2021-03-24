@@ -10,17 +10,17 @@ export default function Home() {
   const [ifood, setIfood] = useState();
 
   useEffect(() => {
-    api.get('contact/contactgettel')
+    api.get('/contact/contactgettel')
     .then(res => setTelphone(res.data));
   }, [telphone]);
 
   useEffect(() => {
-    api.get('contact/contactgetwhats')
+    api.get('/contact/contactgetwhats')
     .then(res => setWhats(res.data));
   }, [whats]);
   
   useEffect(() => {
-    api.get('contact/contactgetifood')
+    api.get('/contact/contactgetifood')
     .then(res => setIfood(res.data));
   }, [ifood]);
 

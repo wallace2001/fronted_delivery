@@ -10,7 +10,7 @@ export default function Home() {
   const img = db.bgMenu;
 
   useEffect(() => {
-    api.get('promo/promoget')
+    api.get('/promo/promoget')
     .then(res => setPromo(res.data));
   }, [promo]);
 

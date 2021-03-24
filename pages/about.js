@@ -7,7 +7,7 @@ import api from '../pages/db';
 export default function Home() {
   const [about, setAbout] = useState();
   useEffect(() => {
-    api.get('about/getabout')
+    api.get('/about/getabout')
     .then(res => setAbout(res.data));
   }, [about])
   

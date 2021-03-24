@@ -21,7 +21,7 @@ export default function Home() {
 
 
     if(checked && name && email && content){
-      api.post('evaluation/sendevaluation', {
+      api.post('/evaluation/sendevaluation', {
         name,
         email,
         description: content,
