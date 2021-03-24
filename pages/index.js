@@ -10,7 +10,7 @@ const ContainerBg = styled.div`
 
   background-image: ${({ img }) => img ? `url(${img})` : '' };
   background-size: cover;
-  object-fit: cover;
+  object-fit: contain;
   background-repeat: no-repeat;
 `;
 

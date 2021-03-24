@@ -131,7 +131,7 @@ Menu.Wrap = styled.div`
         height: 150px;
         border-radius: 10px;
 
-        object-fit: cover;
+        object-fit: contain;
     }
 
     @media screen and (max-width: 1624px){

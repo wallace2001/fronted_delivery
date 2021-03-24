@@ -68,7 +68,7 @@ Promo.Column = styled.div`
         height: 150px;
         border-radius: 10px;
 
-        object-fit: cover;
+        object-fit: contain;
     }
 
     h2{
