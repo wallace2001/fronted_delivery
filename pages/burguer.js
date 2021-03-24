@@ -3,7 +3,7 @@ import { Menu } from '../src/components/Menu/Open';
 import { Header } from '../src/Fixed/Header';
 import {falseApi} from '../pages/api/hello';
 import db from '../pages/api/config.json';
-import {api} from '../pages/db';
+import {api} from '../db';
 
 
 export default function Home() {

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import db from '../pages/api/config.json';
 import { Header } from '../src/Fixed/Header';
 import { Contact } from '../src/components/Contact';
-import {api} from '../pages/db';
+import {api} from '../db';
 
 export default function Home() {
   const [telphone, setTelphone] = useState();

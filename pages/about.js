@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Header } from '../src/Fixed/Header';
 import {About} from '../src/components/About';
 import db from '../pages/api/config.json';
-import {api} from '../pages/db';
+import {api} from '../db';
 
 export default function Home() {
   const [about, setAbout] = useState();

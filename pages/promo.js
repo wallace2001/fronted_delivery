@@ -3,7 +3,7 @@ import { Header } from '../src/Fixed/Header';
 import { Promo } from '../src/components/Promo';
 import db from '../pages/api/config.json';
 import { falseApiPromo } from '../pages/api/hello';
-import {api} from '../pages/db';
+import {api} from '../db';
 
 export default function Home() {
   const [promo, setPromo] = useState();
