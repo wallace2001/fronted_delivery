@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Header } from '../src/Fixed/Header';
 import {About} from '../src/components/About';
 import db from '../pages/api/config.json';
+import api from '../pages/db';
 
 export default function Home() {
+  const [about, setAbout] = useState();
+  useEffect(() => {
+    api.get('about/getabout')
+    .then(res => setAbout(res.data));
+  }, [about])
+  
   const img = db.bgMenu;
   return (
     <>
@@ -12,8 +19,14 @@ export default function Home() {
           <About.Wrap>
             <About.Img backgroundImg={img} />
             <About.Content>
-              <h1>SOBRE NÓS</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus elit eleifend enim pulvinar, quis efficitur ex elementum. Pellentesque quis ligula hendrerit, bibendum mauris eget, ultricies metus. Mauris aliquet lorem in risus porttitor efficitur. Nullam eu turpis et ligula molestie mollis. Duis finibus dolor vitae dolor tempus, at lobortis nunc ultrices. Phasellus vitae erat facilisis orci convallis feugiat. Sed in mauris eu nulla malesuada scelerisque. Phasellus pharetra quis odio at efficitur. Suspendisse nec consequat arcu. In mauris purus, aliquam et iaculis pretium, ultricies nec enim. Aenean nec augue viverra, posuere lacus sed, finibus tellus. Nullam vulputate lorem ut ex ullamcorper lacinia. Ut suscipit quam arcu, nec laoreet dolor vulputate sit amet. Pellentesque gravida eget nibh eu pharetra.</p>
+              {!about ? '' : about.map((item, index) => {
+                return(
+                  <div key={index}>
+                    <h1>{item.title}</h1>
+                    <p>{item.description}</p>
+                  </div>
+                );
+              })}
               <button>INCRÍVEL</button>
             </About.Content>
           </About.Wrap>

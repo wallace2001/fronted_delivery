@@ -1,14 +1,28 @@
-import React from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import { Box } from '../../components/Header';
 
 import {Container} from '../../components/Container';
 import { Navbar } from '../Navbar';
 
 export const Header = () => {
+  const [fixed, setFixed] = useState();
+
+  const changeNav = () => {
+    if(window.scrollY >= 80){
+      setFixed(true);
+    }else{
+      setFixed(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeNav);
+  }, [])
+
+  const modalRef = useRef();
 
   return (
-    <Container>
-        <Box>
+        <Box fixed={fixed}>
             <Box.Header>
               <Navbar />
             </Box.Header>
@@ -19,6 +33,5 @@ export const Header = () => {
 
             <div></div>
         </Box>
-      </Container>
   )
 }

@@ -16,7 +16,7 @@ Promo.Img = styled.div`
 Promo.black = styled.div`
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.5);
+    background-color: ${({ theme }) => theme.colors.backgroundBlack};
 
 `;
 
@@ -30,7 +30,7 @@ Promo.Content = styled.div`
 
 Promo.Box = styled.div`
     width: 70%;
-    background-color: rgba(255,255,255,.9);
+    background-color: ${({ theme }) => theme.colors.boxPromo};
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -50,7 +50,6 @@ Promo.Div = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    flex: 2;
 
     padding: 2%;
     margin-bottom: 5%;
@@ -62,13 +61,14 @@ Promo.Column = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex: 2;
 
 
     img{
         width: 200px;
         height: 150px;
         border-radius: 10px;
+
+        object-fit: cover;
     }
 
     h2{
@@ -84,7 +84,7 @@ Promo.Column = styled.div`
         width: 200px;
         height: 50px;
 
-        background-color: #bf9300;
+        background-color: ${({ theme }) => theme.colors.buttonPrice};
         outline: none;
         border: none;
         text-align: center;
@@ -104,12 +104,13 @@ Promo.Column = styled.div`
 `;
 
 Promo.Align = styled.div`
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    flex: 2;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
 
     @media screen and (max-width: 968px){
         flex-direction: column;

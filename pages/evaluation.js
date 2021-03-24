@@ -4,6 +4,7 @@ import { Header } from '../src/Fixed/Header';
 import { Evaluation } from '../src/components/Evaluation';
 import { useRouter } from 'next/router';
 import db from '../pages/api/config.json';
+import api from '../pages/db';
 
 export default function Home() {
   const [checked, setChecked] = useState(null);
@@ -11,6 +12,7 @@ export default function Home() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [content, setContent] = useState('');
+  const [err, setErr] = useState();
   const router = useRouter();
   const img = db.bgMenu;
 
@@ -19,13 +21,19 @@ export default function Home() {
 
 
     if(checked && name && email && content){
-      console.log(checked);
-      console.log(name);
-      console.log(email);
-      console.log(content);
-      setTimeout(() => {
-        router.push('/evaluationok');
-      }, 1 * 1000);
+      api.post('evaluation/sendevaluation', {
+        name,
+        email,
+        description: content,
+        stars: checked
+      }).then(res => {
+        setErr(res.data);
+        setTimeout(() => {
+          if(!res.data.message)
+            router.push('/evaluationok');
+        }, 1 * 1000);
+      });
+
     }else{
       alert('Alguma informação faltando!');
     }

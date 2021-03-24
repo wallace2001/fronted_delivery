@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from '../src/Fixed/Header';
 import { Promo } from '../src/components/Promo';
 import db from '../pages/api/config.json';
 import { falseApiPromo } from '../pages/api/hello';
+import api from '../pages/db';
 
 export default function Home() {
-  const Api = falseApiPromo;
+  const [promo, setPromo] = useState();
   const img = db.bgMenu;
+
+  useEffect(() => {
+    api.get('promo/promoget')
+    .then(res => setPromo(res.data));
+  }, [promo]);
+
   return (
     <>
       <Header />  
@@ -17,14 +24,14 @@ export default function Home() {
               <Promo.Box>
               <h1>PROMOÇÃO</h1>
               <Promo.Align>
-                {Api.map((item, index) => {
+                {!promo ? '' : promo.map((item, index) => {
                   return(
                     <Promo.Div key={index}>
                       <Promo.Column>
-                        <img src={item.photo} alt={item.name} />
+                        <img src={item.url} alt={item.name} />
                         <h2>{item.name}</h2>
                         <p>{item.description}</p>
-                        <button>{item.price}</button>
+                        <button>R${item.price}</button>
                       </Promo.Column>
                     </Promo.Div>
                   );

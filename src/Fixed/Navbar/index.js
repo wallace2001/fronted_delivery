@@ -17,7 +17,6 @@ export const Navbar = () => {
 
     const showNavbar = (e) => {
       setNavbar(!navbar);
-      console.log(navbar);
     }
 
     const nextPage = (e) => {

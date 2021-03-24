@@ -26,7 +26,7 @@ Evaluation.Box = styled.div`
     border-radius: 10px;
     
     padding: 3%;
-    background-color: rgba(255,255,255,.8);
+    background-color: ${({ theme }) => theme.colors.backgroundProducts};
 
     @media screen and (max-width: 768px){
         width: 80%;
@@ -43,7 +43,7 @@ Evaluation.Box = styled.div`
 
         border: none;
         border-radius: 10px;
-        background-color: #2AB727;
+        background-color: ${({ theme }) => theme.colors.boxEvaluation};
         outline: none;
         cursor: pointer;
 
@@ -139,7 +139,7 @@ Evaluation.text = styled.div`
 
         strong{
             font-size: 16px;
-            color: rgba(100,100,100,.6);
+            color: ${({ theme }) => theme.colors.strongEvaluation};
         }
     }
 `;
@@ -173,7 +173,7 @@ Evaluation.Button = styled.div`
 
         border: none;
         border-radius: 10px;
-        background-color: #2AB727;
+        background-color: ${({ theme }) => theme.colors.boxEvaluation};
         outline: none;
         cursor: pointer;
 
@@ -195,7 +195,7 @@ Evaluation.Info = styled.div`
     flex-direction: column;
     
     padding: 3%;
-    background-color: rgba(255,255,255,.8);
+    background-color: ${({ theme }) => theme.colors.backgroundProducts};
 
     @media screen and (max-width: 768px){
         width: 80%;
@@ -215,7 +215,7 @@ Evaluation.Info = styled.div`
 
         border: none;
         border-radius: 10px;
-        background-color: #2AB727;
+        background-color: ${({ theme }) => theme.colors.boxEvaluation};
         outline: none;
         cursor: pointer;
 

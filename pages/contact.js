@@ -1,9 +1,29 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import db from '../pages/api/config.json';
 import { Header } from '../src/Fixed/Header';
 import { Contact } from '../src/components/Contact';
+import api from '../pages/db';
 
 export default function Home() {
+  const [telphone, setTelphone] = useState();
+  const [whats, setWhats] = useState();
+  const [ifood, setIfood] = useState();
+
+  useEffect(() => {
+    api.get('contact/contactgettel')
+    .then(res => setTelphone(res.data));
+  }, [telphone]);
+
+  useEffect(() => {
+    api.get('contact/contactgetwhats')
+    .then(res => setWhats(res.data));
+  }, [whats]);
+  
+  useEffect(() => {
+    api.get('contact/contactgetifood')
+    .then(res => setIfood(res.data));
+  }, [ifood]);
+
   const img = db.bgMenu;
   return (
     <>
@@ -14,21 +34,29 @@ export default function Home() {
               <Contact.Box>
                 <Contact.Wrapper>
                   <h1>WhatsApp</h1>
-                  <h4>(61)99178-6805</h4>
-                  <h4>(61)99178-6805</h4>
-                  <h4>(61)99178-6805</h4>
-                  <h4>(61)99178-6805</h4>
+                  {!whats ? '' : whats.map((item, index) => {
+                    return(
+                      <h4 key={index}>{item.info}</h4>
+                    );
+                  })}
                 </Contact.Wrapper>
 
                 <Contact.Wrapper>
                   <h1>Telefone</h1>
-                  <h4>(61)99178-6805</h4>
-                  <h4>(61)99178-6805</h4>
+                  {!telphone ? '' : telphone.map((item, index) => {
+                    return(
+                      <h4 key={index}>{item.info}</h4>
+                    );
+                  })}
                 </Contact.Wrapper>
 
                 <Contact.Wrapper>
                   <h1>Ifood</h1>
-                  <h4>Incrível Burguer</h4>
+                  {!ifood ? '' : ifood.map((item, index) => {
+                    return(
+                      <a key={index} href={item.info} target="_blank">{item.info}</a>
+                    );
+                  })}
                 </Contact.Wrapper>
 
               </Contact.Box>

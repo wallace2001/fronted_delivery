@@ -70,7 +70,7 @@ Menu.Container = styled.div`
     width: 100%;
     height: 100%;
 
-    background-color: rgba(31, 17, 0, 1);
+    background-color: ${({ theme}) => theme.colors.backgroundContainerMenu};
     background-image: url(${({ backgroundImg }) => backgroundImg ? backgroundImg : ''});
     background-size: cover;
 
@@ -88,7 +88,7 @@ Menu.Black = styled.div`
 
     display: flex;
     justify-content: center;
-    background-color: rgba(0,0,0,.5);
+    background-color: ${({ theme }) => theme.colors.backgroundBlack};
 `;
 
 Menu.Content = styled.div`
@@ -98,7 +98,7 @@ Menu.Content = styled.div`
     align-items: center;
     flex-direction: column;
 
-    background-color: rgba(255,255,255,.8);
+    background-color: ${({ theme }) => theme.colors.backgroundProducts};
 
     padding: 0px 5% 5% 5%;
 
@@ -109,8 +109,10 @@ Menu.Content = styled.div`
 `;
 
 Menu.Wrap = styled.div`
+    width: 60%;
+    height: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
 
@@ -128,33 +130,14 @@ Menu.Wrap = styled.div`
         width: 200px;
         height: 150px;
         border-radius: 10px;
+
+        object-fit: cover;
     }
 
-    button{
-        width: 200px;
-        height: 50px;
-
-        background-color: #bf9300;
-        outline: none;
-        border: none;
-        text-align: center;
-        border-radius: 5px;
-        cursor: pointer;
-
-        &:hover{
-            transform: scale(1.04);
-        }
-        &:focus{
-            border: 1px solid white;
-        }
-
-        color: white;
-        font-size: 20px;
-    }
-
-    @media screen and (max-width: 760px){
+    @media screen and (max-width: 1624px){
         flex-direction: column;
     }
+
 `;
 
 Menu.column1 = styled.div`
@@ -181,8 +164,43 @@ Menu.column2 = styled.div`
     padding-top: 50px;
 
     p{
-        padding: 0px 15% 0px 15%;
+        padding: 0px 5% 0px 5%;
         text-align: center;
+    }
+
+    @media screen and (max-width: 760px){
+        padding-top: 10px;
+        flex-direction: column;
+    }
+`;
+
+Menu.column3 = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 50px;
+
+    button{
+        width: 150px;
+        height: 50px;
+
+        background-color: ${({ theme }) => theme.colors.buttonPrice};
+        outline: none;
+        border: none;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.04);
+        }
+        &:focus{
+            border: 1px solid white;
+        }
+
+        color: white;
+        font-size: 20px;
     }
 
     @media screen and (max-width: 760px){

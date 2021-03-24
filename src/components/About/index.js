@@ -30,8 +30,8 @@ About.Content = styled.div`
     align-items: center;
     flex-direction: column;
 
-
-    p{
+    div{
+        p{
         text-align: center;
         padding: 0px 35% 0px 35%;
         line-height: 25px;
@@ -44,6 +44,8 @@ About.Content = styled.div`
             padding: 0px 10% 0px 10%;
         }
     }
+    }
+
 
     button{
         width: 200px;
@@ -51,7 +53,7 @@ About.Content = styled.div`
 
         border: none;
         outline: none;
-        background-color: #70C900;
+        background-color: ${({ theme }) => theme.colors.buttonAbout};
         border-radius: 10px;
         color: white;
     }

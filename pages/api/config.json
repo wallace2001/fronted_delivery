@@ -9,7 +9,16 @@
             "colorHeader": "black",
             "primary": "#fff",
             "secondary": "black",
-            "test": "#ccc"
+            "test": "#ccc",
+            "buttonAbout": "#70C900",
+            "backgroundBlack": "rgba(0,0,0,.5)",
+            "boxPromo": "rgba(255,255,255,.9)",
+            "buttonPrice": "#bf9300",
+            "backgroundContainerMenu": "rgba(31, 17, 0, 1)",
+            "backgroundProducts": "rgba(255,255,255,.8)",
+            "boxEvaluation": "#2AB727",
+            "strongEvaluation": "rgba(100,100,100,.6)"
+
         }
     },
     "links":{
