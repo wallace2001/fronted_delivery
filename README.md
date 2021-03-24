@@ -1,34 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Web-site de hamburgueria.
 
-## Getting Started
+# Este Web-Site foi criado com a itenção de vender hamburgueres.
+# Este site é o da hamburgueria sem ser o painel de controler, para ver o painel, está no meu repositório com nome "panelController_delivery".
+# O site é totalmente responsivo, e o servidor dele está funcionando normalmente, se quiser testar tanto o painel de controle como esse, é só clicar no link que deixarei aqui em baixo para ir para minha conta da vercel.
 
-First, run the development server:
+## As tecnologias usadas para este projeto foram NextJS, ReactJS, NodeJS e MongoDB. Por motivos de qualidade, agilidade e financeira.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Link do Site: [site](https://fronted-delivery.vercel.app/)
+Aqui abaixo estarão as imagens disponiveis do site.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Página Home
+![home](https://github.com/wallace2001/fronted_delivery/blob/main/images/index.png)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+# Uma página do site
+![another](https://github.com/wallace2001/fronted_delivery/blob/main/images/contact.png)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Página de avaliação
+![evaluation](https://github.com/wallace2001/fronted_delivery/blob/main/images/evaluation.png)
